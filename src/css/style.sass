@@ -1,0 +1,234 @@
+@import 'helpers/responsive'
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap')
+
+// Colors
+$color-background: white
+$color-surface: #FFFFFF
+$color-text: black
+$color-pwa-blue: #0038A7
+$color-pwa-red: #CC323A
+$color-line: rgba(0,0,0,0.1)
+
+body
+    font-family: Raleway, Roboto, sans-serif
+    margin: 0
+    background-color: $color-background
+    color: $color-text
+    
+.app-nav
+    position: sticky
+    top: 0
+    z-index: 10
+    border-bottom: 1px solid $color-line
+    background-color: $color-background
+    
+
+    &__actual
+        display: flex
+        align-items: center
+        
+        padding: 4px
+        max-width: 1080px
+        margin-left: auto
+        margin-right: auto
+
+        @include from($tablet)
+            padding: 16px 32px
+
+        @include from($desktop)
+            padding: 8px 32px
+
+    &__logo
+        width: 56px
+        padding: 16px
+        @include from($tablet)
+            width: 76px
+
+    &__menu-list
+        list-style: none
+        margin: unset
+        margin-left: auto
+        display: flex
+
+    &__menu-button
+        padding: 16px
+        border: none
+        background-color: transparent
+
+.app-main
+    padding: 4px
+    @include from($tablet)
+        padding: 16px
+    @include from($desktop)
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-top: 64px
+
+    max-width: 1105px
+    margin-left: auto
+    margin-right: auto
+
+    &__description
+        padding: 16px
+        font-size: 20px
+        line-height: 30px
+        width: 240px
+
+        @include from($phone)
+            width: 270px
+            font-size: 24px
+            line-height: 32px
+
+        @include from($tablet)
+            width: 600px
+            font-size: 32px
+            line-height: 48px
+            margin: 16px
+
+        @include from($desktop)
+            font-size: 36px
+            line-height: 48px
+            width: 400px
+            margin-top: 0
+            padding-top: 0
+            
+        // @include from($hd)
+        //     font-size: 48px
+        //     line-height: 60px
+        //     width: 550px
+        //     margin-top: 0
+        //     padding-top: 0
+            
+
+
+    &__primary-links
+        list-style: none
+        padding: 0
+        @include from($tablet)
+            margin-bottom: 64px
+        @include from($desktop)
+            margin: 0
+            margin-right: 32px
+            
+
+    &__primary-link
+        font-size: 15px
+        text-decoration: none
+        color: $color-text
+        display: flex
+        flex-direction: column
+        border: 2px solid $color-text
+        margin: 16px
+        padding: 40px 16px 16px 16px
+        border-radius: 0px 16px
+        position: relative
+        background-repeat: no-repeat
+        background-position: calc(100% - 16px) 0
+        background-size: 128px
+
+        @include from($phone)
+            font-size: 17px
+            @media screen and ( min-height: 730px )
+                padding-top: 60px
+                background-size: 160px
+        @include from($tablet)
+            padding-top: 80px
+            margin: 32px
+            padding: 80px 24px 24px 24px
+            background-position: calc(100% - 32px) 0
+            background-size: 224px
+            font-size: 24px
+        @include from($desktop)
+            font-size: 18px
+            width: 224px
+            background-size: 192px
+            margin-right: 0
+       
+                
+
+        &::before
+            content: ''
+            position: absolute
+            top: 8px
+            left: 8px
+            width: 100%
+            height: 100%
+            border-radius: 0px 16px
+            z-index: -1
+            opacity: 0.1
+
+    &__primary-link--blue
+        background-image: url(../img/pwa-art.svg)
+        @include from($desktop)
+            margin-left: 128px
+        &::before
+            background-color: $color-pwa-blue
+        &::after
+            @include from($desktop)
+                width: 60px
+                height: 60px
+                position: absolute
+                content: ''
+                bottom: 0
+                right: calc(100% + 32px)
+
+                background-image: url(../img/red-accent.svg)
+                background-repeat: no-repeat
+        
+    &__primary-link--red
+        background-image: url(../img/community-art.svg)
+        background-size: 115px
+        @include from($phone)
+            @media screen and ( min-height: 730px )
+                background-size: 150px
+        @include from($tablet)
+            background-size: 200px
+        @include from($desktop)
+            background-size: 170px
+        &::before
+            background-color: $color-pwa-red
+        &::after
+            @include from($desktop)
+                width: 60px
+                height: 60px
+                position: absolute
+                content: ''
+                top: 0
+                left: calc(100% + 32px)
+
+                background-image: url(../img/blue-accent.svg)
+                background-repeat: no-repeat
+            
+
+    &__primary-link-text
+        margin-top: 4px
+
+
+.app-footer, .app-main__alternate-social
+
+    &__social-links
+        display: flex
+        list-style: none
+        padding: 0
+    &__social-link
+        padding: 16px
+        text-decoration: none
+    
+
+.app-footer
+    @include from($desktop)
+        display: none
+
+.app-footer__social-links
+    justify-content: center
+
+.app-main__alternate-social
+    display: flex
+    align-items: center
+    @include to($tablet)
+        display: none
+
+    &__social-link
+        padding: 8px
