@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "pwa-pilipinas"
+  },
+  "targets": {
+    "pwa-pilipinas": {
+      "hosting": {
+        "pwapilipinas-org": [
+          "pwapilipinas-org"
+        ]
+      }
+    }
   }
 }

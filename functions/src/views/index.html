@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>PWA Pilipinas</title>
+    <style>
+        button.primary {
+            background-color: #ECB800;
+            padding: 15px;
+            border: 0;
+            border-radius: 12px;
+            font-size: 12pt;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button.primary:hover {
+            filter: brightness(90%);
+        }
+
+        button.primary:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="app-nav">
+        <div class="app-nav__actual">
+        <img class="app-nav__logo" src="./assets/img/pwaph-logo-small.png" alt="PWA Pilipinas logo" onclick="window.location.replace('/')">
+        <ul class="app-nav__menu-list">
+            <li class="app-nav__menu-item">
+                <button class="primary" onclick="window.location.replace('https://app.pwapilipinas.org')">
+                    Open PWA Pilipinas App
+                </button>
+            </li>
+        </ul>
+    </div>
+    </nav>
+    <main class="app-main">
+        <div>
+        <p class="app-main__description">The community organization for <strong>Progressive Web App</strong> enthusiasts, developers and
+            designers in the Philippines.
+        </p>
+        <div class="app-main__alternate-social">
+                <span style="text-align: left; margin-left: 32px;">Like and follow us:</span>
+                <ul class="app-main__alternate-social__social-links">
+                        <li>
+                            <a class="app-main__alternate-social__social-link" href="https://fb.com/pwapilipinas">
+                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="#000000"
+                                        d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z" />
+                                </svg>
+                            </a></li>
+                        <li>
+                            <a class="app-main__alternate-social__social-link" href="https://twitter.com/pwapilipinas">
+                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="#000000"
+                                        d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li><a class="app-main__alternate-social__social-link" href="https://www.linkedin.com/company/pwa-pilipinas/">
+                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="#000000"
+                                        d="M21,21H17V14.25C17,13.19 15.81,12.31 14.75,12.31C13.69,12.31 13,13.19 13,14.25V21H9V9H13V11C13.66,9.93 15.36,9.24 16.5,9.24C19,9.24 21,11.28 21,13.75V21M7,21H3V9H7V21M5,3A2,2 0 0,1 7,5A2,2 0 0,1 5,7A2,2 0 0,1 3,5A2,2 0 0,1 5,3Z" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <ul class="app-main__primary-links">
+            <li><a href="https://www.youtube.com/watch?v=z2JgN6Ae-Bo" class="app-main__primary-link app-main__primary-link--blue">
+
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                    <span class="app-main__primary-link-text">What are <strong>Progressive Web Apps</strong>?</span>
+                </a></li>
+            <li><a href="https://app.pwapilipinas.org" class="app-main__primary-link app-main__primary-link--red">
+
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                    <span class="app-main__primary-link-text"><strong>Join</strong> our Community</span>
+                </a></li>
+        </ul>
+        
+
+
+    </main>
+    <footer class="app-footer">
+            <p style="text-align: center; margin-top: 32px; margin-bottom: 4px;">Like and follow us</p>
+            <ul class="app-footer__social-links">
+                    <li>
+                        <a class="app-footer__social-link" href="https://fb.com/pwapilipinas">
+                            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                <path fill="#000000"
+                                    d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z" />
+                            </svg>
+                        </a></li>
+                    <li>
+                        <a class="app-footer__social-link" href="https://twitter.com/pwapilipinas">
+                            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                <path fill="#000000"
+                                    d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li><a class="app-footer__social-link" href="https://www.linkedin.com/company/pwa-pilipinas/">
+                            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                <path fill="#000000"
+                                    d="M21,21H17V14.25C17,13.19 15.81,12.31 14.75,12.31C13.69,12.31 13,13.19 13,14.25V21H9V9H13V11C13.66,9.93 15.36,9.24 16.5,9.24C19,9.24 21,11.28 21,13.75V21M7,21H3V9H7V21M5,3A2,2 0 0,1 7,5A2,2 0 0,1 5,7A2,2 0 0,1 3,5A2,2 0 0,1 5,3Z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+    </footer>
+</body>
+
+</html>
