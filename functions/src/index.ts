@@ -3,6 +3,7 @@ import * as express from 'express';
 const cors = require('cors');
 const nunjucks = require('nunjucks');
 const admin = require('firebase-admin');
+const stripHtml = require("string-strip-html");
 
 admin.initializeApp();
 
@@ -26,6 +27,7 @@ app.get('/event/:id', (req,res) => {
         if(ref.exists) {
             const data = ref.data();
             data.id = req.params.id;
+            data.descriptionHeader = stripHtml(data.description);
             data.month = new Date(data.date.startDate).toLocaleDateString('default', { month: 'long' });
             data.day = new Date(data.date.startDate).toLocaleDateString('default', { day:'numeric' });
             data.startTime = new Date(data.date.startDate).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
